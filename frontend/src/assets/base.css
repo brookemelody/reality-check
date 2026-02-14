@@ -41,3 +41,14 @@ body {
 h1 {
   text-shadow: 0 10px 5px white;
 }
+
+.typewriter {
+  overflow: hidden;
+  animation: typing 4s steps(40, end) infinite;
+  white-space: nowrap;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
