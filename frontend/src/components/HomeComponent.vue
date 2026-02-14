@@ -11,7 +11,7 @@ import CharacterProfile from './CharacterProfile.vue';
         firstName="Chad"
         lastName="Siren"
         status = "Victim"
-        age = 32
+        :age = 32
         gender = "Male"
         occupation = "Hacker"
         imageURL = "https://www.nicepng.com/png/full/300-3002785_silhouette-male-silhouette-man-head.png"
@@ -21,7 +21,7 @@ import CharacterProfile from './CharacterProfile.vue';
         firstName="Miss"
         lastName="Information" 
         status = "Suspect"
-        age = 28
+        :age = 28
         gender = "Female"
         occupation = "Software Engineer"
         imageURL = "https://www.imb.org/students/wp-content/uploads/sites/4/2023/08/woman-head-silhouette-png-black-and-white-download-female-silhouette-head-11563010560sqe7wt34hg.png"
@@ -31,7 +31,7 @@ import CharacterProfile from './CharacterProfile.vue';
         firstName="Arthur"
         lastName="Dimmesdale" 
         status = "Suspect"
-        age = 22
+        :age = 22
         gender = "Male"
         occupation = "Junior Software Engineer"
         imageURL = "https://www.nicepng.com/png/full/300-3002785_silhouette-male-silhouette-man-head.png"
