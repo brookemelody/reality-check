@@ -35,7 +35,7 @@ import CharacterProfile from './CharacterProfile.vue';
         gender = "Male"
         occupation = "Junior Software Engineer"
         imageURL = "https://www.nicepng.com/png/full/300-3002785_silhouette-male-silhouette-man-head.png"
-        description = "Mr. Siren's provided video evidence shows Miss Information and Mr. Dimmesdale having a romantic date at the NC State Fair, sharing a romantic cone of Howling Cow ice cream."
+        description = "Mr. Siren's provided video evidence shows Miss Information and Mr. Dimmesdale having a romantic date at Carowinds, sharing a romantic cone of Howling Cow ice cream."
     />
 </div>
 

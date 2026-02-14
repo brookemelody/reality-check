@@ -52,3 +52,22 @@ h1 {
   from { width: 0 }
   to { width: 100% }
 }
+
+button {
+  color: hsla(160, 100%, 37%, 1);
+  border: 0.1em solid hsla(160, 100%, 37%, 1);
+  background-color: transparent;
+  font-family: "Syne Mono", monospace;
+  font-weight: bold;
+  padding: 1em;
+}
+
+button:hover {
+  background-color: hsla(160, 100%, 37%, 1);
+  color: black;
+  transition: 0.5s ease-in-out;
+}
+
+button:active {
+  transform: scale(1.3);
+}

@@ -5,6 +5,7 @@
   <main>
     <nav>
       <RouterLink to="/">Case Overview</RouterLink>
+      <RouterLink to="/timeline">Timeline</RouterLink>
       <RouterLink to="/evidence">Evidence</RouterLink>
     </nav>
     <router-view></router-view>
