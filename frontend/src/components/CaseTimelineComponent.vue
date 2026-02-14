@@ -7,8 +7,15 @@ let ascending = ref(true);
 </script>
 
 <template>
+    <h1>Timeline</h1>
     <div class="container">
-        <button @click="ascending = !ascending">{{ ascending ? "ASC" : "DESC" }}</button>
+        <div class="top_container">
+            <div>
+                <h3>Logged in as: <strong>USER</strong></h3>
+                <h3>Last Login: {{ new Date() }}</h3>
+            </div>
+            <button @click="ascending = !ascending">{{ ascending ? "ASC" : "DESC" }}</button>
+        </div>
         <div :class="{ 'timeline_container': true, 'descending' : !ascending }">
             <TimelineEventComponent
                 :timestamp="new Date('2025-12-25T12:00:00Z')"
@@ -57,14 +64,15 @@ let ascending = ref(true);
 </template>
 
 <style scoped>
+.top_container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .timeline_container, .container {
     display: flex;
     flex-direction: column;
     gap: 1em;
-}
-
-.container {
-    align-items: flex-start;
 }
 
 .descending {
