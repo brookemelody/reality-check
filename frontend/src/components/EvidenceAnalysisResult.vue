@@ -1,8 +1,18 @@
 <script setup>
+import axios from 'axios';
+import { ref } from 'vue';
+
+let testResponse = ref("Loading data...");
+
+axios.get('https://api.sampleapis.com/switch/games').then((response) => {
+  let index = Math.floor(Math.random() * response.data.length);
+  testResponse.value = response.data[index].name;
+})
 </script>
 
 <template>
   <div class="case_file">
+    {{ testResponse }}
   </div>
 </template>
 
