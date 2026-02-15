@@ -16,17 +16,15 @@
     }
 
     function jumpToTimeStamp(seconds) {
-        console.log(seconds);
-        // const video = document.getElementById("evidence_video");
-        // console.log(video);
-        // video.currentTime = seconds;
+        const video = document.getElementById("evidence_video");
+        video.currentTime = seconds;
     }
 </script>
 
 <template>
     <tr>
         <td>
-            <span @click="jumpToTimeStamp(timestamp)"><strong>{{ formatTimestamp(timestamp) }}</strong></span>
+            <span id="timestamp_button" @click="jumpToTimeStamp(timestamp)"><strong>{{ formatTimestamp(timestamp) }}</strong></span>
         </td>
         <td>
             {{ reason }}
@@ -38,5 +36,10 @@
 td {
     border: 0.1em solid black;
     padding: 1em;
+}
+
+#timestamp_button:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 </style>

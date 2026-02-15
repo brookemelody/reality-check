@@ -43,7 +43,6 @@ axios.get('https://api.sampleapis.com/switch/games').then((response) => {
   position: relative; /* Required for absolute positioning of pseudo-element */
   padding: 15px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  z-index: -1;
   min-height: 40em;
 
   display: flex;
