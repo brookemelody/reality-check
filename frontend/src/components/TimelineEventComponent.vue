@@ -11,10 +11,10 @@
     <div class="card">
         <div class="event_info">
             <h3>{{ timestamp }}</h3>
-            <h3>{{ type }}</h3>
+            <h3><strong>{{ type }}</strong></h3>
         </div>
         <h2>{{ summary }}</h2>
-        <p>Data entry logged by {{ user }}</p>
+        <p>Data entry logged by <strong>{{ user }}</strong></p>
     </div>
 </template>
 

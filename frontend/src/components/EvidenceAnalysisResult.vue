@@ -1,6 +1,7 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
+import AnalysisTableRowComponent from './AnalysisTableRowComponent.vue';
 
 let testResponse = ref("Loading data...");
 
@@ -13,6 +14,23 @@ axios.get('https://api.sampleapis.com/switch/games').then((response) => {
 <template>
   <div class="case_file">
     {{ testResponse }}
+    <video id="evidence_video" controls>
+      <source src="../assets/demo_video.mp4" type="video/mp4">
+    </video>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Timestamp</th>
+          <th scope="col">Reasoning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <AnalysisTableRowComponent
+          :timestamp="2"
+          reason="Cats aren't snakes. And Miss Information never cheated on her husband."
+        />
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -27,6 +45,12 @@ axios.get('https://api.sampleapis.com/switch/games').then((response) => {
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   z-index: -1;
   min-height: 40em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
 .case_file::before {
@@ -48,4 +72,18 @@ axios.get('https://api.sampleapis.com/switch/games').then((response) => {
   border-top-right-radius: 8px; /* Smooth top-right corner of the tab */
   border-top-left-radius: 4px; /* Slight curve on the top-left */
 }
+
+#evidence_video {
+  max-width: 50em;
+  max-height: 50em;
+}
+
+table, th {
+  border: 0.1em solid black;
+}
+
+th {
+  font-weight: bold;
+}
+
 </style>
