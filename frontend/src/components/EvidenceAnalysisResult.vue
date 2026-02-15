@@ -6,14 +6,15 @@ import AnalysisTableRowComponent from './AnalysisTableRowComponent.vue';
 let testResponse = ref("Loading data...");
 
 axios.get('https://api.sampleapis.com/switch/games').then((response) => {
+  console.log(testResponse);
   let index = Math.floor(Math.random() * response.data.length);
   testResponse.value = response.data[index].name;
+  console.log(testResponse);
 })
 </script>
 
 <template>
   <div class="case_file">
-    {{ testResponse }}
     <video id="evidence_video" controls>
       <source src="../assets/demo_video.mp4" type="video/mp4">
     </video>
@@ -27,7 +28,11 @@ axios.get('https://api.sampleapis.com/switch/games').then((response) => {
       <tbody>
         <AnalysisTableRowComponent
           :timestamp="2"
-          reason="Cats aren't snakes. And Miss Information never cheated on her husband."
+          reason="Cats aren't snakes."
+        />
+        <AnalysisTableRowComponent
+          :timestamp="5"
+          reason="And Miss Information never cheated on her husband."
         />
       </tbody>
     </table>
@@ -46,9 +51,8 @@ axios.get('https://api.sampleapis.com/switch/games').then((response) => {
   min-height: 40em;
 
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 1em;
 }
 

@@ -11,7 +11,7 @@ let ascending = ref(true);
     <div class="container">
         <div class="top_container">
             <div>
-                <h3>Logged in as: <strong>USER</strong></h3>
+                <h3>Logged in as: <strong>DETECTIVE</strong></h3>
                 <h3>Last Login: {{ new Date() }}</h3>
             </div>
             <button @click="ascending = !ascending">{{ ascending ? "ASC" : "DESC" }}</button>
