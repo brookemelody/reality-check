@@ -6,10 +6,10 @@ import AnalysisTableRowComponent from './AnalysisTableRowComponent.vue';
 let testResponse = ref("Loading data...");
 
 axios.get('https://api.sampleapis.com/switch/games').then((response) => {
-  console.log(testResponse);
+  console.log(testResponse.value);
   let index = Math.floor(Math.random() * response.data.length);
   testResponse.value = response.data[index].name;
-  console.log(testResponse);
+  console.log(testResponse.value);
 })
 </script>
 
@@ -27,12 +27,24 @@ axios.get('https://api.sampleapis.com/switch/games').then((response) => {
       </thead>
       <tbody>
         <AnalysisTableRowComponent
-          :timestamp="2"
+          :timestamp="1"
           reason="Cats aren't snakes."
         />
         <AnalysisTableRowComponent
-          :timestamp="5"
+          :timestamp="2"
           reason="And Miss Information never cheated on her husband."
+        />
+        <AnalysisTableRowComponent
+          :timestamp="3"
+          reason="Crime may change its shape, but it never changes its purpose."
+        />
+        <AnalysisTableRowComponent
+          :timestamp="5"
+          reason="Operatives, this case deserves a good crackin' with better ways of detecting criminals' lies and AI sources."
+        />
+        <AnalysisTableRowComponent
+          :timestamp="7"
+          reason="The siren's callin', but it ain't aware of what it's bringin' in."
         />
       </tbody>
     </table>
