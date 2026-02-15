@@ -20,12 +20,12 @@
 
 <style scoped>
 .card {
-  color: hsla(160, 100%, 37%, 1);
-  border: 0.1em solid hsla(160, 100%, 37%, 1);
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+    color: hsla(160, 100%, 37%, 1);
+    border: 0.1em solid hsla(160, 100%, 37%, 1);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .card::before {
@@ -38,6 +38,19 @@
 .event_info {
     display: flex;
     justify-content: space-between;
+}
+
+.card:hover {
+    color: black;
+    background-color: hsla(160, 100%, 37%, 1);
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover::before {
+    content: "";
+    background-color: black;
+    width: 1em;
+    height: 1em;
 }
 </style>
 
